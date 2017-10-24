@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vyc-eQ-sy1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Robo Hash App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuA-Fq-JKh">
+                                <rect key="frame" x="50" y="250.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-ji-nbl">
+                                <rect key="frame" x="53" y="311.5" width="269" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Tap Here To Get Your Robo Hash!">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRoboHashButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWT-iM-zGg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter A String:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa9-vb-ngC">
+                                <rect key="frame" x="138" y="213.5" width="99.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fe1-ji-nbl" firstAttribute="centerX" secondItem="nuA-Fq-JKh" secondAttribute="centerX" id="49e-iR-HIU"/>
+                            <constraint firstItem="nuA-Fq-JKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HNU-wO-MFb"/>
+                            <constraint firstItem="Fe1-ji-nbl" firstAttribute="top" secondItem="nuA-Fq-JKh" secondAttribute="bottom" constant="31" id="OdS-Qf-Vvq"/>
+                            <constraint firstItem="nuA-Fq-JKh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="PK6-HW-u1j"/>
+                            <constraint firstItem="nuA-Fq-JKh" firstAttribute="top" secondItem="Wa9-vb-ngC" secondAttribute="bottom" constant="19" id="djF-UC-nTe"/>
+                            <constraint firstItem="Wa9-vb-ngC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lCS-KN-O5H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nuA-Fq-JKh" secondAttribute="trailing" constant="50" id="xnX-Je-XRo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Robo Hash App" id="Q6z-F7-IiD"/>
+                    <connections>
+                        <outlet property="roboHashButton" destination="Fe1-ji-nbl" id="Coa-ay-mY1"/>
+                        <outlet property="stringTextfield" destination="nuA-Fq-JKh" id="FIY-yE-gaS"/>
+                        <segue destination="uZL-5h-Fzb" kind="show" identifier="roboHashSegue" id="PAh-ce-wvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="132.68365817091455"/>
+        </scene>
+        <!--Robo Hash Image-->
+        <scene sceneID="nAh-Wo-gRq">
+            <objects>
+                <viewController id="uZL-5h-Fzb" customClass="RoboHashViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m3Q-hq-VnX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-bw-PrM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rbn-bw-PrM" firstAttribute="top" secondItem="9au-DB-Umd" secondAttribute="bottom" constant="-603" id="AES-E1-j3S"/>
+                            <constraint firstItem="Rbn-bw-PrM" firstAttribute="leading" secondItem="9au-DB-Umd" secondAttribute="trailing" constant="-375" id="hxi-tn-77p"/>
+                            <constraint firstItem="Rbn-bw-PrM" firstAttribute="centerY" secondItem="9au-DB-Umd" secondAttribute="centerY" id="sG6-QX-LVc"/>
+                            <constraint firstItem="Rbn-bw-PrM" firstAttribute="centerX" secondItem="9au-DB-Umd" secondAttribute="centerX" id="zSP-9F-hl3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9au-DB-Umd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Robo Hash Image" id="IpJ-Hj-qRA">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="qrr-hc-Z12"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="roboHashImageView" destination="Rbn-bw-PrM" id="2tZ-fd-hAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s77-sS-4Eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.8" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="64a-kZ-WkT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vyc-eQ-sy1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WaP-3K-Siy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="neL-5L-lNe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2W-S8-8Ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="133"/>
+        </scene>
+    </scenes>
+</document>
